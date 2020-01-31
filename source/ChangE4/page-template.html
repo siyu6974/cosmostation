@@ -1,0 +1,62 @@
+---
+title: ChangE4
+date: 2020-01-31 14:49:24
+<!-- layout: false -->
+---
+
+<style type="text/css">
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #333333;
+        background: #EEEEEE;
+    }
+
+    .observation {
+        padding-top: 20px;
+        clear: both;
+    }
+
+    .small {
+        font-size: 80%;
+    }
+
+    .box {
+        float: left;
+        text-align: center;
+        margin: 2px;
+        padding: 5px;
+    }
+
+    .clearboth {
+        clear: both;
+    }
+</style>
+
+
+{% for ob in tcam %}
+<div class="observation">
+    <h2>Observation {{ ob.ob }} ({{ ob.date }})</h2>
+    {% for img in ob.imgs %}
+    <div class="box">
+        <a href="{{img.org}}">
+            <img src="{{img.tn}}" />
+            {{img.name}}
+        </a>
+    </div>
+
+    {% endfor %}
+</div>
+{% endfor %}
+
+<!-- <div class="observation">
+    <h2>Observation 0002 (December 15, 2013)</h2>
+</div>
+<div class="box"><a
+        href="https://planetary.s3.amazonaws.com/data/change3/tcam/png/TCAM-I-002_SCI_P_20131215085809_0002_A_2C.png"><img
+            src="http://planetary.s3.amazonaws.com/data/change3/tcam/t/TCAM-I-002_SCI_P_20131215085809_0002_A_2C_t.png"></a><br>2013-12-15
+    08:58:09<br><span class="small"><a
+            href="https://planetary.s3.amazonaws.com/data/change3/tcam/png/TCAM-I-002_SCI_P_20131215085809_0002_A_2A.png">A
+            PNG</a></span></div>
+
+test -->
