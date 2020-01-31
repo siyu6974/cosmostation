@@ -5,15 +5,16 @@ from datetime import datetime
 
 # [{ ob: 0004; date:xxx; imgs: [{tn: thumbnail, org: orginal, name: name}] }]
 tcam = []
-dirs = sorted(glob.glob('TCAM/*'))
+dirs = sorted(glob.glob('*/'))
 print(dirs)
 for d in dirs:
-    ob, date = d.split('/')[-1].split('_')
-    orgs = sorted(glob.glob(f'{d}/*.png'))
-    tns = sorted(glob.glob(f'{d}/thumbnails/*.jpg'))
+    print(d)
+    ob, date = d.split('_')
+    date = date.split('/')[0]
+    orgs = sorted(glob.glob(f'{d}*.png'))
+    tns = sorted(glob.glob(f'{d}thumbnails/*.jpg'))
     imgs = []
     print(len(orgs))
-    print(d)
 
     for i, org in enumerate(orgs):
         imgs.append({
@@ -27,7 +28,6 @@ for d in dirs:
         'date': date,
         'imgs': imgs
     })
-print(tcam)
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(
     searchpath='')

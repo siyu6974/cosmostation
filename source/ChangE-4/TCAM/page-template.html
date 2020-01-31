@@ -33,30 +33,33 @@ date: 2020-01-31 14:49:24
     }
 </style>
 
+<h1>
+    嫦娥4号着陆器地形相机
+</h1>
+原始数据来源和版权信息请见 <a href="http://moon.bao.ac.cn">探月工程官网</a>
+<br>
+数据处理脚本：<a href="https://github.com/siyu6974/ChangE_4_data_playground">已开源</a>
+<br>
+点击拍摄时间下载原图
+<br>
 
+<h2>说明</h2>
+以下TCAM数据基于1月3日发布的2C级PDS文件，共两组120张。
+<br>
+2C数据本身已经经过了debayer操作，我的批处理脚本只做读取和保存操作。
+<br>
+我在拼接过程中发现图片边缘有异常的颜色（已反馈），所以做了裁剪，因此图片的尺寸略小于原始尺寸。
+<br>
 {% for ob in tcam %}
 <div class="observation">
     <h2>Observation {{ ob.ob }} ({{ ob.date }})</h2>
     {% for img in ob.imgs %}
     <div class="box">
+        <img src="{{img.tn}}?size=180x130" />
         <a href="{{img.org}}">
-            <img src="{{img.tn}}" />
             {{img.name}}
         </a>
     </div>
-
     {% endfor %}
 </div>
 {% endfor %}
-
-<!-- <div class="observation">
-    <h2>Observation 0002 (December 15, 2013)</h2>
-</div>
-<div class="box"><a
-        href="https://planetary.s3.amazonaws.com/data/change3/tcam/png/TCAM-I-002_SCI_P_20131215085809_0002_A_2C.png"><img
-            src="http://planetary.s3.amazonaws.com/data/change3/tcam/t/TCAM-I-002_SCI_P_20131215085809_0002_A_2C_t.png"></a><br>2013-12-15
-    08:58:09<br><span class="small"><a
-            href="https://planetary.s3.amazonaws.com/data/change3/tcam/png/TCAM-I-002_SCI_P_20131215085809_0002_A_2A.png">A
-            PNG</a></span></div>
-
-test -->
