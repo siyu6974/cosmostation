@@ -7,9 +7,9 @@ def make_dir_if_n_exist(d):
         os.makedirs(d)
     return d
 
-SIZE = (256, 256)
+SIZE = (512, 512)
 
-dirs = sorted(glob.glob('/Volumes/PowerBar/exp/TCAM/*'))
+dirs = sorted(glob.glob('TCAM/*/'))
 print(dirs)
 
 for d in dirs:
@@ -19,7 +19,7 @@ for d in dirs:
         for p in imgs:
             im = Image.open(p)
             im.thumbnail(SIZE, Image.ANTIALIAS)
-            im.save(f"{d}/thumbnails/tn_{p.split('/')[-1].split('.')[0]}.jpg", 'JPEG', quality=80)
+            im.save(f"{d}/thumbnails/tn_{p.split('/')[-1].split('.')[0]}.jpg", 'JPEG', quality=70)
     except:
         print(p)
 
