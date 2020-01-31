@@ -1,0 +1,3 @@
+[submodule "themes/stun"]
+	path = themes/stun
+	url = git@github.com:siyu6974/hexo-theme-stun.git
