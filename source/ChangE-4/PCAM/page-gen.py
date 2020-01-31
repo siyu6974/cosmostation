@@ -4,26 +4,38 @@ from datetime import datetime
 
 
 # [{ ob: 0004; date:xxx; imgs: [{tn: thumbnail, org: orginal, name: name}] }]
-tcam = []
+pcam = []
 dirs = sorted(glob.glob('*/'))
-print(dirs)
+# print(dirs)
 for d in dirs:
-    print(d)
+    # print(d)
     ob, date = d.split('_')
     date = date.split('/')[0]
-    orgs = sorted(glob.glob(f'{d}*.png'))
-    tns = sorted(glob.glob(f'{d}thumbnails/*.jpg'))
-    imgs = []
-    print(len(orgs))
+    lcam = sorted(glob.glob(f'{d}PCAML/*.png'))
+    rcam = sorted(glob.glob(f'{d}PCAMR/*.png'))
+    
+    if len(lcam) != len(rcam):
+        print(d)
+        continue
 
-    for i, org in enumerate(orgs):
+    lrimgs = [''] * len(lcam) * 2
+    for i in range(len(lrimgs)):
+        if i % 2:
+            lrimgs[i] = lcam[i//2]
+        else:
+            lrimgs[i] = rcam[i//2]
+    
+    imgs = []
+    for i, org in enumerate(lrimgs):
+        s = org.split('/')  # ['0001_2019-01-04', 'PCAMR', '000-20190104041502-PCAMR.png']
+        tn = f"{s[0]}/{s[1]}/thumbnails/tn_{s[2].split('.')[0]}.jpg"
         imgs.append({
-            'tn': tns[i],
+            'tn': tn,
             'org': org,
             'name': datetime.strptime(org.split('/')[-1].split('-')[1], '%Y%m%d%H%M%S').strftime('%m-%d %H:%M:%S')
         })
 
-    tcam.append({
+    pcam.append({
         'ob': ob,
         'date': date,
         'imgs': imgs
@@ -34,7 +46,7 @@ env = jinja2.Environment(loader=jinja2.FileSystemLoader(
 )
 template = env.get_template('page-template.html')
 
-output = template.render(tcam=tcam)
+output = template.render(pcam=pcam)
 with open('index.html', 'w') as f:
     f.write(output)
 
