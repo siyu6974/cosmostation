@@ -4,3 +4,4 @@ PCAM/*
 
 !*.html
 !*.py
+!*.txt

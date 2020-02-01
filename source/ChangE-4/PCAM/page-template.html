@@ -40,8 +40,12 @@ date: 2020-01-31 14:49:24
 <br>
 数据处理脚本：<a href="https://github.com/siyu6974/ChangE_4_data_playground">已开源</a>
 <br>
-点击拍摄时间下载原图
+<b>点击图片查看预览，点击拍摄时间下载原图</b>
 <br>
+你也可以用下载器下载
+<a href="PCAM_all.txt">
+    全部图片
+</a>
 
 <h2>说明</h2>
 以下PCAM数据基于1月3日发布的2B级PDS文件，共34组2564张。
@@ -58,7 +62,7 @@ PCAM可以获取2352×1728（彩色）或1176×864（全色）两种格式的照
     <h2>Observation {{ ob.ob }} ({{ ob.date }})</h2>
     {% for img in ob.imgs %}
     <div class="box">
-        <a href="{{img.org}}" data-fancybox="images" data-caption="{{img.name}}" >
+        <a href="{{img.tn}}" data-fancybox="images" data-caption="{{img.name}}" >
             <img src="{{img.tn}}?size=210x150" alt="" />
         </a>
 
