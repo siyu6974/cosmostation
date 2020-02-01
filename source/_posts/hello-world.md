@@ -1,38 +1,9 @@
 ---
 title: 欢迎
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+欢迎来到思宇的天文小站。
+我是一名计算机专业研究生，软硬件通吃，也喜欢研究算法。
+这个博客里我会尝试融合我的专业和天文爱好，给大家一个新的视角看天文和计算机专业。
 
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+除了在这里发布文字和图片，我还会在B站上做些（可能硬核的）科普视频。[欢迎来捧场](https://space.bilibili.com/11639241)。
