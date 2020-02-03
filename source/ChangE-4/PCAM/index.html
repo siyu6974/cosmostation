@@ -56,7 +56,30 @@ PCAM可以获取2352×1728（彩色）或1176×864（全色）两种格式的照
 <br>
 全色照片为机内bin2的灰度图像，脚本只做拉伸。
 <br>
+----------------------------------------------------
+<h1>
+    ChangE-4 rover (Yutu-2) Panoramic Camera (PCAM)
+</h1>
+Original PDS data and credit goes to <a href="http://moon.bao.ac.cn">CNSA</a>
+<br>
+Processing scripts for generating these images from PDS files are <a href="https://github.com/siyu6974/ChangE_4_data_playground">opensourced on Github</a>
+<br>
+<b>Click the image to preview it, click the time below for its full resolution png</b>
+<br>
+Use a downloader (such as Motrix) to 
+<a href="PCAM_all.txt">
+    download all images
+</a>
 
+<h2>NOTE</h2>
+The following 2564 (34 groups) images are generated from the 2B version PDS files released on Jan 3rd.
+<br>
+The PCAM can produce images in two forms: 2352×1728 (color) or 1176×864 (panchromatic).
+<br>
+For the former, my script debayered and stretched linearly (p2p98) the images before exporting.
+<br>
+The latter were grayscale images that were downscaled internally, so my script only did the stretching.
+<br>
 
 <div class="observation">
     <h2>Observation 0001 (2019-01-04)</h2>

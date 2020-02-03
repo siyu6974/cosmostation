@@ -52,10 +52,36 @@ date: 2020-01-31 14:49:24
 <br>
 2C数据本身已经经过了debayer操作，我的批处理脚本只做读取和保存操作。
 <br>
-我在拼接过程中发现图片边缘有异常的颜色（已反馈），所以做了裁剪，因此图片的尺寸略小于原始尺寸。
+我在拼接过程中发现图片边缘有异常的颜色（数据中心证实是debayer时插值的问题），所以做了裁剪，因此图片的尺寸略小于原始尺寸。
 <br>
 另外，原始数据中所有的角度都有两张曝光参数一样的图片，我这里做了清理，只保留了其中一张。
 <br>
+--------------------------------------------------------------
+<br>
+<h1>
+    ChangE-4 Lander Terrain Camera (TCAM)
+</h1>
+Original PDS data and credit goes to <a href="http://moon.bao.ac.cn">CNSA</a>
+<br>
+Processing scripts for generating these images from PDS files are <a href="https://github.com/siyu6974/ChangE_4_data_playground">opensourced on Github</a>
+<br>
+<b>Click the image to preview it, click the time below for its full resolution png</b>
+<br>
+Use a downloader (such as Motrix) to 
+<a href="TCAM_all.txt">
+    download all images
+</a>
+
+<h2>Note</h2>
+The following 120 images are generated from the 2C version PDS files released on Jan 3rd.
+<br>
+The 2C data are already debayered, so my scripts simply read and export it.
+<br>
+During stitching, I noticed all images show weird colors at the edges (confirmed by the data center, it's an interpolation issue at the debayer process). So I cropped the edges by a few pixels, therefore the size of my exported images are sightly smaller than the origianls.
+<br>
+In addition, for a given angle, there appeared to be two identical images with the same exposure settings in the dataset, here I kept only one of them.
+<br>
+
 {% for ob in tcam %}
 <div class="observation">
     <h2>Observation {{ ob.ob }} ({{ ob.date }})</h2>
