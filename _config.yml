@@ -94,7 +94,11 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: stun
+# add caption for iamges
 
+image_caption:
+  enable: true #false to disable
+  
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
