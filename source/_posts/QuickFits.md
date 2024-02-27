@@ -36,9 +36,13 @@ QuickFits 的算法部分经过多轮的优化，最新版本 1.1.0 的图片预
 
 MacOS 上可以点击[这里](https://apps.apple.com/cn/app/quickfits/id1551075981?mt=12)在 Mac App Store 下载, 如果链接不干活，请搜索 QuickFits 
 
-Windows 平台稍微复杂一些，步骤如下（不一定是最新版本）
-1. 下载并安装 [QuickLook for Windows](QuickLook-3.6.11.msi)
-2. 下载[我的插件](QuickLook.Plugin.FitsViewer.qlplugin)
+Windows 平台稍微复杂一些，步骤如下：视频教程：https://www.bilibili.com/video/BV18p4y1872G
+1. 以下任一方法 下载并安装 QuickLook for Windows
+   - Github [最新版本](https://github.com/QL-Win/QuickLook)
+   - [驿站镜像](QuickLook-3.7.3.msi)
+2. 以下任一方法 下载我的插件
+   - Github [最新版本](https://github.com/siyu6974/QuickLook.Plugin.FitsViewer)
+   - [驿站镜像](20240111_QuickLook.Plugin.FitsViewer.qlplugin)
 3. 在文件管理器中找到刚刚下载的插件，后缀应该是.qlplugin
 4. 单击文件选中，按空格键，在弹出窗口中点击右下的”安装此插件“
 5. 重启 QuickLook（或重启电脑）
