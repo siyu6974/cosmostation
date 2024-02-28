@@ -15,7 +15,7 @@ tags:
 
 <!-- more -->
 
-{% raw %}
+{% notion_html %}
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Evora Autofocus Phase I: Focus assist</title><style>
 	/* cspell:disable-file */
@@ -32,6 +32,13 @@ tags:
 	body {
 		margin: 0;
 		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
 	}
 	
 	body {
@@ -690,4 +697,4 @@ tags:
 	</p><h1 id="24d7df61-4256-4a4c-8951-66d5c2a2ccc4" class="">TODO</h1><ul id="8c59721f-de5c-4927-a538-adc6b184d7f1" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">sweep all filters, make an offset table</span><div class="indented"></div></li></ul><ul id="b1beee06-9db4-4467-83c3-c5b4895d3f4c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">make better UI &amp; integrate into evora</span><div class="indented"></div></li></ul><ul id="74d2c332-dd58-433e-864c-1db3d3763d64" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">sub pixel HFD</span><div class="indented"></div></li></ul><h1 id="4c5063fc-1447-4296-a9d4-52c0e6049854" class="">After first field test</h1><p id="ef330ef0-e250-4aca-85e8-bb6c468b2db4" class=""><time>@October 31, 2023</time> </p><p id="b54881ae-9740-4e13-80d1-4247310ec3e6" class="">The hot fix using SEP and parameters that worked at MRO doesn’t work for my setup</p><ul id="74c3dfd2-fadb-46a6-8f87-a486da0970a5" class="bulleted-list"><li style="list-style-type:disc">Too many stars</li></ul><ul id="079ce5a8-34c9-4b0a-9124-8f32b085e4d3" class="bulleted-list"><li style="list-style-type:disc">FWHM fit can produce extreme outliers</li></ul><p id="4421c9ef-24f2-4ded-b05d-121c39e4c4ef" class="">Solutions</p><ul id="a7bbbe25-7ad7-40a7-88aa-d30bc3ce5e91" class="bulleted-list"><li style="list-style-type:disc">limit source extraction output</li></ul><ul id="86bef35b-f722-4d10-84bf-8a64723bee22" class="bulleted-list"><li style="list-style-type:disc">use median FWHM </li></ul><p id="c6fbb239-0eb9-4e18-a494-18aee7668213" class="">HFD</p><ul id="75b703db-52cb-4b36-983a-3ff4fa167044" class="bulleted-list"><li style="list-style-type:disc">Issue with previous HFD calculation: pixel distance set to the top left corner of the aperture, should be the center</li></ul><ul id="a7ac7ac0-5ece-426a-ad85-343a91ffd30b" class="bulleted-list"><li style="list-style-type:disc">Phd2 implementation: <a href="https://github.com/OpenPHDGuiding/phd2/blob/5576bc0832c78b009e30687ac6b30404cb9e8fcd/star.cpp#L113">https://github.com/OpenPHDGuiding/phd2/blob/5576bc0832c78b009e30687ac6b30404cb9e8fcd/star.cpp#L11</a><a href="https://github.com/OpenPHDGuiding/phd2/blob/5576bc0832c78b009e30687ac6b30404cb9e8fcd/star.cpp#L83">3</a></li></ul><ul id="4f2cbcae-af1e-4f8b-a0e4-9678ecc4ad5e" class="bulleted-list"><li style="list-style-type:disc"><code><strong>sep.flux_radius</strong></code><strong> is fast </strong></li></ul><div id="c73b9e0b-447f-48cb-8601-9f5b49a57646" class="column-list"><div id="e2ae957a-2e34-4c2e-9905-f96f2deca854" style="width:50.000000000000014%" class="column"><figure id="fae3db8f-5c27-408d-8680-de9e3c0f869c" class="image"><a href="Untitled13.png"><img style="width:989px" src="Untitled13.png"/></a><figcaption>previous</figcaption></figure></div><div id="4cae7bbb-fc56-4021-b319-3fc9bd5aa7a4" style="width:50%" class="column"><figure id="17ffca7c-6459-47b7-9a7d-f982c086cb3b" class="image"><a href="Untitled14.png"><img style="width:989px" src="Untitled14.png"/></a><figcaption>sep extraction, median</figcaption></figure><p id="92a454ec-fa78-4361-b790-020281add3ee" class="">
 	</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body>
 </html>
-{% endraw %}
+{% endnotion_html %}

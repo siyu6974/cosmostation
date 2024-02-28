@@ -18,6 +18,7 @@
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-tag": "^2.0.0",
     "hexo-image-caption": "^0.1.1",
+    "hexo-notion-html": "github:siyu6974/hexo_tag_notion_html",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-pug": "^3.0.0",
