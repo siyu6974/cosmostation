@@ -796,7 +796,7 @@ quicklink:
 # Pjax
 # See: https://github.com/MoOx/pjax/
 pjax:
-  enable: false
+  enable: true
   # When switching pages, scroll to the bottom of the top image.
   avoid_banner: false
   # ! --------------------------------------------------
