@@ -14,6 +14,8 @@ tags:
 
 {% asset_img notion_instax_combined.jpg "Instax 星空" %}
 
+<!-- more -->
+
 {% asset_img DSC01602.jpg "器材照" %}
 因为我知道要长时间曝光，并且想尽可能的把第一次体验做到最好，所以我直接上了重型的深空装备。我还清楚地记得同事见到我后备箱里的一大堆器材的时候，眼睛都瞪大了。
 
